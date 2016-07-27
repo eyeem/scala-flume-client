@@ -1,6 +1,6 @@
 # Scala flume client
 
- [ ![Download](https://api.bintray.com/packages/eyeem/maven/flume-client/images/download.svg) ](https://bintray.com/eyeem/maven/flume-client/_latestVersion)
+[![Download](https://api.bintray.com/packages/eyeem/maven/flume-client/images/download.svg) ](https://bintray.com/eyeem/maven/flume-client/_latestVersion)[![Build Status](https://travis-ci.org/eyeem/scala-flume-client.svg?branch=master)](https://travis-ci.org/eyeem/scala-flume-client)
 
 A tiny Scala library to send events and entities to [Apache Flume](https://flume.apache.org/).  
 
