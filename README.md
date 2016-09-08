@@ -20,7 +20,7 @@ Add following lines to your ```build.sbt```:
 ```scala
 resolvers += Resolver.bintrayRepo("eyeem", "maven")
 
-libraryDependencies += "com.eyeem" %% "flume-client" % 0.1.0
+libraryDependencies += "com.eyeem" %% "flume-client" % "0.1.0"
 ```
 
 Override these defaults in your application.conf if needed:
