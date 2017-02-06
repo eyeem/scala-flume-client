@@ -16,10 +16,7 @@
 
 package com.eyeem.flume.client
 
-import com.typesafe.config.ConfigFactory
-
 import pureconfig._
-import pureconfig.ConfigConvert._
 
 /**
  * PureConfig usage:

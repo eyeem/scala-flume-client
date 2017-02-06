@@ -20,7 +20,7 @@ Add following lines to your ```build.sbt```:
 ```scala
 resolvers += Resolver.bintrayRepo("eyeem", "maven")
 
-libraryDependencies += "com.eyeem" %% "flume-client" % "0.1.0"
+libraryDependencies += "com.eyeem" %% "flume-client" % "0.1.1"
 ```
 
 Override these defaults in your application.conf if needed:
@@ -44,8 +44,7 @@ flume {
 | module                       | dependsOn                | version  |
 | ---------------------------- | ------------------------ | -------- |
 | flume-client                 | play-json                | 2.5.x    |
-|                              | type-safe config         | >= 1.3.0 |
-|                              | pureconfig               | 0.1.9    |
+|                              | pureconfig               | 0.5.1    |
 |                              | libthrift                | 0.9.3    |
 
 There is a hard dependency on play-json. If you would like to have support for other json libraries, please open an issue or pull request.
