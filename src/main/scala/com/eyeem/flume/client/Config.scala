@@ -16,7 +16,7 @@
 
 package com.eyeem.flume.client
 
-import pureconfig._
+import pureconfig.{ ProductHint, _ }
 
 /**
  * PureConfig usage:
@@ -56,8 +56,9 @@ case class FlumeConfig(
 )
 
 object Config {
+  implicit def productHint[T] = ProductHint[T](ConfigFieldMapping(CamelCase, CamelCase))
 
-  private lazy val config: PureConfig = loadConfig[PureConfig].get
+  private lazy val config: PureConfig = loadConfig[PureConfig].right.get
 
   lazy val flumeConfig = config.flume
 }
