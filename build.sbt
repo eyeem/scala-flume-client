@@ -2,15 +2,15 @@ name := """flume-client"""
 
 organization := "com.eyeem"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.3"
 
 libraryDependencies ++= Seq(
   "org.apache.thrift" % "libthrift" % "0.9.3",
   "ch.qos.logback" % "logback-classic" % "1.0.9",
-  "com.typesafe.play" %% "play-json" % "2.5.12",
-  "com.github.pureconfig" %% "pureconfig" % "0.7.2",
+  "com.typesafe.play" %% "play-json" % "2.6.5",
+  "com.github.pureconfig" %% "pureconfig" % "0.8.0",
 
-  "org.scalatest" %% "scalatest" % "2.2.4" % "test",
+  "org.scalatest" %% "scalatest" % "3.0.4" % "test",
   "org.mockito" % "mockito-all" % "1.8.4" % "test"
 )
 
