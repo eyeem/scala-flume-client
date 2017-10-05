@@ -16,15 +16,13 @@
 
 package com.eyeem.flume.client
 
-import org.mockito.Mockito._
-import org.scalatest.{ WordSpecLike, OptionValues, MustMatchers }
-import org.scalatest.concurrent.{ AsyncAssertions, ScalaFutures }
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.concurrent.{ ScalaFutures, Waiters }
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.time.{ Millis, Seconds, Span }
-
+import org.scalatest.{ MustMatchers, OptionValues, WordSpecLike }
 import org.slf4j.LoggerFactory
 
-abstract class BaseSpec extends WordSpecLike with MustMatchers with OptionValues with MockitoSugar with AsyncAssertions with ScalaFutures {
+abstract class BaseSpec extends WordSpecLike with MustMatchers with OptionValues with MockitoSugar with Waiters with ScalaFutures {
 
   val log = LoggerFactory.getLogger(this.getClass)
 
