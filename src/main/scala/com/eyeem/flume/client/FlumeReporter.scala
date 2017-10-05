@@ -30,7 +30,7 @@ import org.joda.time.DateTime
 import org.slf4j.LoggerFactory
 import play.api.libs.json.{ JsValue, Json }
 
-import scala.collection.JavaConversions._
+import scala.collection.JavaConverters._
 import scala.concurrent.{ ExecutionContext, Future }
 
 class FlumeReporter(flumeConfig: FlumeConfig = Config.flumeConfig) {
@@ -95,7 +95,7 @@ class FlumeReporter(flumeConfig: FlumeConfig = Config.flumeConfig) {
         buffer.flip()
 
         logger.debug(s"Sending event to $host:$port: $data")
-        client.append(new ThriftFlumeEvent(headers, buffer))
+        client.append(new ThriftFlumeEvent(headers.asJava, buffer))
       } catch {
         case tException: TException =>
           logger.error(s"TException on sending event $data to flume server", tException)
