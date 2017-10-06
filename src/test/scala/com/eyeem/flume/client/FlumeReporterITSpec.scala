@@ -17,11 +17,9 @@
 package com.eyeem.flume.client
 
 import com.eyeem.flume.client.models.FlumeEntity
-import play.api.libs.json.{ JsNull, Json }
+import play.api.libs.json.Json
 
 import scala.concurrent.Future
-
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.runtime.BoxedUnit
 
 /**

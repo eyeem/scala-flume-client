@@ -18,7 +18,7 @@ package com.eyeem.flume.client
 
 import com.eyeem.flume.client.models.FlumeEntity
 import org.apache.thrift.transport.TTransportException
-import play.api.libs.json.{ JsNull, Json }
+import play.api.libs.json.JsNull
 
 import scala.concurrent.Future
 
