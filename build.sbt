@@ -8,7 +8,7 @@ libraryDependencies ++= Seq(
   "org.apache.thrift" % "libthrift" % "0.10.0",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
   "com.typesafe.play" %% "play-json" % "2.6.5",
-  "com.github.pureconfig" %% "pureconfig" % "0.8.0",
+  "com.github.pureconfig" %% "pureconfig" % "0.7.2",
 
   "org.scalatest" %% "scalatest" % "3.0.4" % "test",
   "org.mockito" % "mockito-all" % "1.10.19" % "test"
