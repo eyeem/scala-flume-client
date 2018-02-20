@@ -39,7 +39,9 @@ class FlumeReporter(flumeConfig: FlumeConfig = Config.flumeConfig) {
 
   private val random = new scala.util.Random(new java.security.SecureRandom())
 
-  implicit val defaultFlumeExecutionContext: ExecutionContext = ExecutionContext.fromExecutor(Executors.newFixedThreadPool(flumeConfig.threadPoolSize))
+  private val threadPoolExec = Executors.newFixedThreadPool(flumeConfig.threadPoolSize)
+
+  implicit val defaultFlumeExecutionContext: ExecutionContext = ExecutionContext.fromExecutor(threadPoolExec)
 
   if (!flumeConfig.enabled) {
     logger.warn("Flume reporting is disabled via flumeConfig. Not sending anything to Flume.")
@@ -55,6 +57,11 @@ class FlumeReporter(flumeConfig: FlumeConfig = Config.flumeConfig) {
 
     submitDataToFlume(entity.json, entityHeaders, flumeConfig.portEntity)
 
+  }
+
+  def shutdown(): Unit = {
+    logger.info("Shutting down the thread pool executor")
+    threadPoolExec.shutdown()
   }
 
   def postEvent(eventName: String, data: JsValue): Future[Unit] = {
