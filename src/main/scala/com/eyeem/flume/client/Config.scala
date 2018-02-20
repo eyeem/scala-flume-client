@@ -21,7 +21,7 @@ import pureconfig.{ ProductHint, _ }
 /**
  * PureConfig usage:
  *
- * Arguments to PureConfig and its subelements must be matching the ones in application.conf / reference.conf
+ * Arguments to PureConfig and its subelements must be matching the ones in reference.conf
  *
  * e.g.
  *
@@ -31,7 +31,7 @@ import pureconfig.{ ProductHint, _ }
  * case class Sub1Config(key1: String, key2: Int, sub2: Sub2Config)
  * case class Sub2Config(key3: String)
  *
- * the following must exist in application.conf
+ * the following must exist in reference.conf
  *
  * sub1 {
  *   key1 = "hello"
