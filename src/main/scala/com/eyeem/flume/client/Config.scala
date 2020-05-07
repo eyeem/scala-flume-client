@@ -16,7 +16,10 @@
 
 package com.eyeem.flume.client
 
-import pureconfig.{ ProductHint, _ }
+import pureconfig.generic.ProductHint
+import pureconfig.generic.auto._
+import pureconfig.generic._
+import pureconfig._
 
 /**
  * PureConfig usage:
